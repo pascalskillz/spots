@@ -1,0 +1,12 @@
+body {
+	margin: 0;
+	display: flex;
+	justify-content: center;
+}
+.wrapper-item {
+	p	{
+		font-size: 60px;
+		color: $brand-color;
+		font-family: cursive;
+	}
+}
