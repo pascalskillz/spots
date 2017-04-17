@@ -81,6 +81,7 @@ nav {
 	transition: opacity 0.2s ease-in;
 }
 .main-wrapper{
+	background-color:#fafafa;
 	display: flex;
 	
 	.container {
@@ -95,6 +96,9 @@ nav {
 	
 	.inner-header {
 		display: flex;
+		background-color: whitesmoke;
+		padding: 10px 0 10px 88px;
+		margin-left: -78px;
 
 		.inner-header-item {
 			flex: 1;
@@ -106,16 +110,25 @@ nav {
 			}
 		}
 	}
+	
+	.action-body {
+		padding: 5px 15px 20px 15px;
+		background-color: aliceblue;
+	}
 	.action-row__item.btn {
 		display: flex;
 		
 		button {
-			padding: 10px;
+			padding: 12px;
 			width: 100%;
+			border:1px solid rgba(128, 128, 128, 0.05);
+			color: #fcfcfc;
+			font-size: 14px;
 		}
 	}
 	.action-row__item.feedback{
 		display: flex;
+		margin-top: 30px;
 		
 		div {
 			flex: 1;
@@ -142,7 +155,111 @@ nav {
 }
 .info-column {
 	flex: 2;
-	visibility: hidden;
+	
+	.info-tabs {
+		background-color: aqua;
+		margin-right: -74px;
+		padding-left: 20%;
+		ul {
+			margin: 0;
+			padding: 0;
+			display: flex;
+		}
+		li {
+			list-style: none;
+			padding: 18px 0;
+			flex: 0 1 12%;
+			border-bottom: 2px solid;
+			margin-right: 5px;
+			text-align: center;
+//			display: inline;
+		}
+	}
+	.details {
+		background-color: aliceblue;
+		margin-left: 20%;
+		padding: 10px 25px;
+		margin-top: 45px;
+		
+		.details-item {
+			border-bottom: 1px solid grey;
+			padding-bottom: 30px;
+			
+			&:last-child {
+				border-bottom: none;
+				padding-bottom: 0px;
+			}
+			div {
+				&:last-child {
+					margin-left: 30px;
+				}
+			}
+		}
+		
+		h3 {
+			font-size: 16px;
+		}
+		p {
+			font-size: 15px;
+			margin-top: 0;
+		}
+
+		.entry-fee__details {
+			display: flex;
+			
+			div {
+				&:first-child {
+					flex: 0 1 25%;
+				}
+				&:last-child {
+					flex: 0 1 25%;
+				}
+			}
+		}
+		
+		.editors-rewiew .editors-review__details {
+			P {
+				line-height: 18px;
+			}
+		}
+		
+		.about {
+			.about__description {
+				margin-top: 30px;
+				p span {
+					display: block;
+					margin: 10px 0 0 10px;
+					line-height: 18px;
+				}
+			}
+			.about__workhour {
+				margin-top: 30px;
+				margin-left: 0 !important;
+				display: flex;
+				
+				div {
+					margin-left: 12%;
+					
+					span {
+						&:last-child {
+							display: block;
+							margin-top: 5px;
+						}
+					}
+				}
+			}
+			.about__age {
+				p span {
+					margin-left: 12%;
+				}
+			}
+		}
+		.contact .contact__number {
+			p span {
+				margin-left: 40px;
+			}
+		}
+	}
 }
 
 
