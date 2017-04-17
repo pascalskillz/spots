@@ -97,7 +97,7 @@ nav {
 	.inner-header {
 		display: flex;
 		background-color: white;
-		padding: 10px 0 10px 88px;
+		padding: 10px 0 5px 88px;
 		margin-left: -78px;
 
 		.inner-header-item {
@@ -106,9 +106,59 @@ nav {
 			span {
 				&:last-child {
 					display: block;
+					margin-top: 5px;
+					font-size: 15px;
+					color: #909090;
+				}
+			}
+			&:nth-child(2){
+				span {
+					margin-top: -2px;
+					font-size: 14px;
 				}
 			}
 		}
+		
+		
+		.rating { 
+			display: inline-block;
+//			float: left;
+		}
+		.rating > input { display: none; } 
+		.rating > label:before { 
+			margin: 5px;
+			font-size: 0.8em;
+			font-family: FontAwesome;
+			display: inline-block;
+			content: "\f005";
+			margin-top: 3px;
+		}
+
+		.rating > .half:before { 
+			content: "\f089";
+			position: absolute;
+		}
+
+		.rating > label { 
+			color: #ddd; 
+			float: right; 
+		}
+
+		/***** CSS Magic to Highlight Stars on Hover *****/
+
+		.rating > input:checked ~ label, /* show gold star when clicked */
+		.rating:not(:checked) > label:hover, /* hover current star */
+		.rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+
+		.rating > input:checked + label:hover, /* hover current star when changing rating */
+		.rating > input:checked ~ label:hover,
+		.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+		.rating > input:checked ~ label:hover ~ label { color: #FFED85;  } 
+		
+		
+		
+		
+		
 	}
 	
 	.action-body {
@@ -138,7 +188,9 @@ nav {
 			
 			span {
 				&:last-child {
-				display: block;
+					display: block;
+					font-size: 15px;
+					color: #909090;
 				}
 			
 			}
@@ -147,6 +199,8 @@ nav {
 	.action-row__item.social {
 		p {
 			text-align: center;
+			font-size: 15px;
+			color: #909090;
 		}
 		.social-btns {
 			display: flex;
@@ -194,13 +248,23 @@ nav {
 		}
 		li {
 			list-style: none;
-			padding: 18px 0;
 			flex: 0 1 12%;
-			border-bottom: 2px solid;
 			margin-right: 5px;
 			text-align: center;
 //			display: inline;
+			
+			&.active {
+				border-bottom: 2px solid grey;
+				margin-top: -2px;
+			}
+			a {
+				text-decoration: none;
+				display: block;
+				color: grey;
+				padding: 18px 0;
+			}
 		}
+		
 	}
 	.details {
 		background-color: #f7f7f7;

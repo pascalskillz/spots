@@ -2767,13 +2767,47 @@ nav {
   .action-column .inner-header {
     display: flex;
     background-color: white;
-    padding: 10px 0 10px 88px;
-    margin-left: -78px; }
+    padding: 10px 0 5px 88px;
+    margin-left: -78px;
+    /***** CSS Magic to Highlight Stars on Hover *****/
+    /* hover previous stars in list */ }
     .action-column .inner-header .inner-header-item {
       flex: 1;
       text-align: center; }
       .action-column .inner-header .inner-header-item span:last-child {
-        display: block; }
+        display: block;
+        margin-top: 5px;
+        font-size: 15px;
+        color: #909090; }
+      .action-column .inner-header .inner-header-item:nth-child(2) span {
+        margin-top: -2px;
+        font-size: 14px; }
+    .action-column .inner-header .rating {
+      display: inline-block; }
+    .action-column .inner-header .rating > input {
+      display: none; }
+    .action-column .inner-header .rating > label:before {
+      margin: 5px;
+      font-size: 0.8em;
+      font-family: FontAwesome;
+      display: inline-block;
+      content: "\f005";
+      margin-top: 3px; }
+    .action-column .inner-header .rating > .half:before {
+      content: "\f089";
+      position: absolute; }
+    .action-column .inner-header .rating > label {
+      color: #ddd;
+      float: right; }
+    .action-column .inner-header .rating > input:checked ~ label,
+    .action-column .inner-header .rating:not(:checked) > label:hover,
+    .action-column .inner-header .rating:not(:checked) > label:hover ~ label {
+      color: #FFD700; }
+    .action-column .inner-header .rating > input:checked + label:hover,
+    .action-column .inner-header .rating > input:checked ~ label:hover,
+    .action-column .inner-header .rating > label:hover ~ input:checked ~ label,
+    .action-column .inner-header .rating > input:checked ~ label:hover ~ label {
+      color: #FFED85; }
   .action-column .action-body {
     padding: 5px 15px 20px 15px;
     background-color: white; }
@@ -2794,9 +2828,13 @@ nav {
       flex: 0 1 28%;
       text-align: center; }
       .action-column .action-row__item.feedback div span:last-child {
-        display: block; }
+        display: block;
+        font-size: 15px;
+        color: #909090; }
   .action-column .action-row__item.social p {
-    text-align: center; }
+    text-align: center;
+    font-size: 15px;
+    color: #909090; }
   .action-column .action-row__item.social .social-btns {
     display: flex;
     justify-content: center;
@@ -2830,11 +2868,17 @@ nav {
       display: flex; }
     .info-column .info-tabs li {
       list-style: none;
-      padding: 18px 0;
       flex: 0 1 12%;
-      border-bottom: 2px solid;
       margin-right: 5px;
       text-align: center; }
+      .info-column .info-tabs li.active {
+        border-bottom: 2px solid grey;
+        margin-top: -2px; }
+      .info-column .info-tabs li a {
+        text-decoration: none;
+        display: block;
+        color: grey;
+        padding: 18px 0; }
   .info-column .details {
     background-color: #f7f7f7;
     margin-left: 20%;
