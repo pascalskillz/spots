@@ -2766,7 +2766,7 @@ nav {
   flex: 1; }
   .action-column .inner-header {
     display: flex;
-    background-color: whitesmoke;
+    background-color: white;
     padding: 10px 0 10px 88px;
     margin-left: -78px; }
     .action-column .inner-header .inner-header-item {
@@ -2776,7 +2776,7 @@ nav {
         display: block; }
   .action-column .action-body {
     padding: 5px 15px 20px 15px;
-    background-color: aliceblue; }
+    background-color: white; }
   .action-column .action-row__item.btn {
     display: flex; }
     .action-column .action-row__item.btn button {
@@ -2787,9 +2787,11 @@ nav {
       font-size: 14px; }
   .action-column .action-row__item.feedback {
     display: flex;
-    margin-top: 30px; }
+    margin-top: 30px;
+    justify-content: center;
+    padding: 0px 12px 20px 12px; }
     .action-column .action-row__item.feedback div {
-      flex: 1;
+      flex: 0 1 28%;
       text-align: center; }
       .action-column .action-row__item.feedback div span:last-child {
         display: block; }
@@ -2797,12 +2799,29 @@ nav {
     text-align: center; }
   .action-column .action-row__item.social .social-btns {
     display: flex;
-    justify-content: space-around; }
+    justify-content: center;
+    padding: 25px 0 25px; }
+    .action-column .action-row__item.social .social-btns div {
+      flex: 0 1 14%;
+      text-align: center; }
+      .action-column .action-row__item.social .social-btns div a {
+        color: white;
+        border-radius: 50%;
+        text-decoration: none; }
+      .action-column .action-row__item.social .social-btns div a.facebook {
+        background-color: #3d5b99;
+        padding: 10px 14px; }
+      .action-column .action-row__item.social .social-btns div a.twitter {
+        background-color: #00aced;
+        padding: 10px 12px; }
+      .action-column .action-row__item.social .social-btns div a.gplus {
+        background-color: #e25714;
+        padding: 10px 9px; }
 
 .info-column {
   flex: 2; }
   .info-column .info-tabs {
-    background-color: aqua;
+    background-color: white;
     margin-right: -74px;
     padding-left: 20%; }
     .info-column .info-tabs ul {
@@ -2817,7 +2836,7 @@ nav {
       margin-right: 5px;
       text-align: center; }
   .info-column .details {
-    background-color: aliceblue;
+    background-color: #f7f7f7;
     margin-left: 20%;
     padding: 10px 25px;
     margin-top: 45px; }
