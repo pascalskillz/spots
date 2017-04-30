@@ -155,10 +155,6 @@ nav {
 		.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
 		.rating > input:checked ~ label:hover ~ label { color: #FFED85;  } 
 		
-		
-		
-		
-		
 	}
 	
 	.action-body {
@@ -174,6 +170,8 @@ nav {
 			border:1px solid rgba(128, 128, 128, 0.05);
 			color: #fcfcfc;
 			font-size: 14px;
+			cursor: pointer;
+			outline: none;
 		}
 	}
 	.action-row__item.feedback{
@@ -273,7 +271,7 @@ nav {
 		margin-top: 45px;
 		
 		.details-item {
-			border-bottom: 1px solid grey;
+			border-bottom: 1px solid #ededed;
 			padding-bottom: 30px;
 			
 			&:last-child {
@@ -293,6 +291,7 @@ nav {
 		p {
 			font-size: 15px;
 			margin-top: 0;
+			color: grey;
 		}
 
 		.entry-fee__details {
@@ -330,6 +329,7 @@ nav {
 				
 				div {
 					margin-left: 12%;
+					color: grey;
 					
 					span {
 						&:last-child {
